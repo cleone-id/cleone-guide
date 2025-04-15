@@ -1,0 +1,37 @@
+[
+  {
+    "game": "Genshin Impact",
+    "links": [
+      { "name": "GameWith", "url": "https://gamewith.net/genshin-impact/" },
+      { "name": "Honey Impact", "url": "https://genshin.honeyhunterworld.com/" },
+      { "name": "KQM Guide", "url": "https://keqingmains.com/" }
+    ]
+  },
+  {
+    "game": "Honkai: Star Rail",
+    "links": [
+      { "name": "Przy Star Rail", "url": "https://przybyszstarrail.com/" },
+      { "name": "HSR Wiki", "url": "https://hsr.honeyhunterworld.com/" }
+    ]
+  },
+  {
+    "game": "Zenless Zone Zero",
+    "links": [
+      { "name": "ZZZ Wiki", "url": "https://zzz.gg/" },
+      { "name": "ZZZ Honey", "url": "https://zenless.honeyhunterworld.com/" }
+    ]
+  },
+  {
+    "game": "Wuthering Waves",
+    "links": [
+      { "name": "WW Wiki", "url": "https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki" },
+      { "name": "WW Honey", "url": "https://wuthering.honeyhunterworld.com/" }
+    ]
+  },
+  {
+    "game": "Blue Protocol",
+    "links": [
+      { "name": "BP Wiki", "url": "https://blue-protocol.fandom.com/wiki/BLUE_PROTOCOL_Wiki" }
+    ]
+  }
+]
