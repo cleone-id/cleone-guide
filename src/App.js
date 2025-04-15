@@ -275,17 +275,17 @@ function App() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
               <div className="bg-black bg-opacity-60 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-yellow-800 text-center hover:border-yellow-600 transition duration-300 transform hover:scale-105">
                 <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-3 sm:mb-4">1. Cari Game</h3>
-                <p className="text-gray-300 text-sm sm:text-base">Gunakan kotak pencarian untuk menemukan game yang ingin kamu mainkan</p>
+                <p className="text-gray-300 text-sm sm:text-base">Pakai fitur pencarian untuk menemukan game yang dimainkan</p>
               </div>
               
               <div className="bg-black bg-opacity-60 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-yellow-800 text-center hover:border-yellow-600 transition duration-300 transform hover:scale-105">
                 <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-3 sm:mb-4">2. Pilih Panduan</h3>
-                <p className="text-gray-300 text-sm sm:text-base">Klik pada nama game dan pilih panduan yang ingin kamu baca</p>
+                <p className="text-gray-300 text-sm sm:text-base">Klik nama game dan pilih panduan yang mau dilihat</p>
               </div>
               
               <div className="bg-black bg-opacity-60 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-yellow-800 text-center hover:border-yellow-600 transition duration-300 transform hover:scale-105">
                 <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-3 sm:mb-4">3. Nikmati</h3>
-                <p className="text-gray-300 text-sm sm:text-base">Baca panduan dan tingkatkan skill bermain game kamu</p>
+                <p className="text-gray-300 text-sm sm:text-base">Baca panduan dan tingkatkan skill dalam game</p>
               </div>
             </div>
           </div>
