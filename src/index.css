@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
 body {
-  background: radial-gradient(circle at center, #332200 0%, #1a1100 50%, #000000 100%);
+  /* background: radial-gradient(circle at center, #332200 0%, #1a1100 50%, #000000 100%); */
   background-attachment: fixed;
   min-height: 100vh;
   position: relative;
@@ -16,7 +18,41 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 50%, rgba(255, 215, 0, 0.1) 100%);
+  /* background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 50%, rgba(255, 215, 0, 0.1) 100%); */
   pointer-events: none;
   z-index: 0;
+}
+
+.font-caveat {
+  font-family: 'Caveat', cursive;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-40%, -60%) scale(1.2) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+@keyframes float-alt {
+  0%, 100% {
+    transform: translate(50%, 50%) scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(60%, 40%) scale(1.2) rotate(-15deg);
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-alt {
+  animation: float-alt 10s ease-in-out infinite;
 }
