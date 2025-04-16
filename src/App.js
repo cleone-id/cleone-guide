@@ -15,7 +15,7 @@ function App() {
   const [filteredGuides, setFilteredGuides] = useState(guides);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  
+
   // Refs for scroll animations
   const heroRef = useRef(null);
   const searchRef = useRef(null);
@@ -28,18 +28,18 @@ function App() {
   useEffect(() => {
     // Track page view on initial load
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-    
+
     const initialExpandState = {};
     guides.forEach(guide => {
       initialExpandState[guide.game] = true; // Start expanded
     });
     setExpandedGames(initialExpandState);
-    
+
     // Add scroll event listener
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -49,11 +49,11 @@ function App() {
     if (searchTerm.trim() === "") {
       setFilteredGuides(guides);
     } else {
-      const filtered = guides.filter(guide => 
-        guide.game.toLowerCase().includes(searchTerm.toLowerCase())
+      const filtered = guides.filter(guide =>
+        guide.keywords.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredGuides(filtered);
-      
+
       // Track search events
       if (searchTerm.trim().length > 2) {
         ReactGA.event({
@@ -64,11 +64,11 @@ function App() {
       }
     }
   }, [searchTerm]);
-  
+
   // Scroll to section with analytics tracking
   const scrollToSection = useCallback((ref) => {
     setMobileMenuOpen(false);
-    
+
     // Get section name for analytics
     let sectionName = "";
     if (ref === heroRef) sectionName = "Home";
@@ -76,14 +76,14 @@ function App() {
     else if (ref === gameListRef) sectionName = "Games";
     else if (ref === tutorialRef) sectionName = "Tutorial";
     else if (ref === footerRef) sectionName = "Contact";
-    
+
     // Track navigation event
     ReactGA.event({
       category: "Navigation",
       action: "Section Click",
       label: sectionName
     });
-    
+
     ref.current.scrollIntoView({ behavior: 'smooth' });
   }, [heroRef, aboutRef, gameListRef, tutorialRef, footerRef]);
 
@@ -91,14 +91,14 @@ function App() {
   const toggleExpand = useCallback((game) => {
     setExpandedGames(prev => {
       const newState = { ...prev, [game]: !prev[game] };
-      
+
       // Track expand/collapse events
       ReactGA.event({
         category: "User Interaction",
         action: newState[game] ? "Expand Game" : "Collapse Game",
         label: game
       });
-      
+
       return newState;
     });
   }, []);
@@ -124,9 +124,9 @@ function App() {
                   <img src="/logo.webp" alt="Cleone.ID Logo" className="h-10 mr-3" />
                   <div className="font-caveat text-xl font-bold text-yellow-500">Cleone.ID</div>
                 </div>
-                
+
                 {/* Mobile menu button */}
-                <button 
+                <button
                   className="md:hidden text-yellow-400 focus:outline-none"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   aria-label="Toggle menu"
@@ -141,7 +141,7 @@ function App() {
                     </svg>
                   )}
                 </button>
-                
+
                 {/* Desktop menu */}
                 <div className="hidden md:flex space-x-8">
                   <button onClick={() => scrollToSection(heroRef)} className="text-yellow-400 hover:text-yellow-300 transition">Home</button>
@@ -151,7 +151,7 @@ function App() {
                   <button onClick={() => scrollToSection(footerRef)} className="text-yellow-400 hover:text-yellow-300 transition">Contact</button>
                 </div>
               </div>
-              
+
               {/* Mobile menu */}
               {mobileMenuOpen && (
                 <div className="md:hidden mt-4 py-4 border-t border-yellow-900 animate-fadeIn">
@@ -167,10 +167,10 @@ function App() {
             </nav>
           </div>
         </div>
-        
+
         {/* Empty space to compensate for fixed navbar */}
         <div className="pt-24"></div>
-        
+
         {/* Hero Section */}
         <header ref={heroRef} className="py-28 transition-all duration-700 transform" style={{ opacity: scrollY > 0 ? 1 : 0.95, transform: `translateY(${scrollY > 0 ? '0' : '20px'})` }}>
           <div className="container mx-auto px-4 text-center">
@@ -185,7 +185,7 @@ function App() {
             </div>
           </div>
         </header>
-        
+
         {/* Search Bar */}
         <div ref={searchRef} className="py-8 transition-all duration-700 transform" style={{ opacity: scrollY > 100 ? 1 : 0.7, transform: `translateY(${scrollY > 100 ? '0' : '20px'})` }}>
           <div className="container mx-auto px-4">
@@ -207,7 +207,7 @@ function App() {
             </div>
           </div>
         </div>
-        
+
         {/* Main Content */}
         <main className="container mx-auto px-4 py-12">
           <div ref={aboutRef} className="max-w-4xl mx-auto transition-all duration-700 transform" style={{ opacity: scrollY > 200 ? 1 : 0.7, transform: `translateY(${scrollY > 200 ? '0' : '30px'})` }}>
@@ -220,7 +220,7 @@ function App() {
                 </p>
               </div>
             </div> */}
-            
+
             {filteredGuides.length === 0 ? (
               <div className="text-center py-10">
                 <p className="text-xl text-yellow-400">Tidak ada game yang ditemukan. Coba kata kunci lain.</p>
@@ -228,19 +228,19 @@ function App() {
             ) : (
               <div ref={gameListRef} className="space-y-6 transition-all duration-700 transform" style={{ opacity: scrollY > 300 ? 1 : 0.7, transform: `translateY(${scrollY > 300 ? '0' : '30px'})` }}>
                 <h2 className="font-caveat text-3xl font-bold text-yellow-500 text-center mb-8">Daftar Game</h2>
-                
+
                 {filteredGuides.map((group) => (
                   <div key={group.game} className="bg-black bg-opacity-60 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-yellow-800 hover:border-yellow-600 transition duration-300">
-                    <div 
+                    <div
                       className="px-4 sm:px-6 py-4 flex justify-between items-center cursor-pointer"
                       onClick={() => toggleExpand(group.game)}
                     >
                       <h2 className="text-lg sm:text-xl font-bold text-yellow-400">{group.game}</h2>
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className={`h-5 w-5 text-yellow-500 transform transition-transform ${expandedGames[group.game] ? 'rotate-180' : ''}`} 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={`h-5 w-5 text-yellow-500 transform transition-transform ${expandedGames[group.game] ? 'rotate-180' : ''}`}
+                        fill="none"
+                        viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -275,24 +275,24 @@ function App() {
             )}
           </div>
         </main>
-        
+
         {/* Tutorial Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div ref={tutorialRef} className="bg-black bg-opacity-60 backdrop-blur-md rounded-2xl py-10 px-8 shadow-lg border border-yellow-800 max-w-5xl mx-auto transition-all duration-700 transform" style={{ opacity: scrollY > 500 ? 1 : 0.7, transform: `translateY(${scrollY > 500 ? '0' : '30px'})` }}>
               <h2 className="font-caveat text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-yellow-500">Tutorial</h2>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
                 <div className="font-caveat bg-black bg-opacity-60 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-yellow-800 text-center hover:border-yellow-600 transition duration-300 transform hover:scale-105">
                   <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-3 sm:mb-4">1. Cari Game</h3>
                   <p className="text-gray-300 text-sm sm:text-base">Pakai fitur pencarian untuk menemukan game yang dimainkan</p>
                 </div>
-                
+
                 <div className="font-caveat bg-black bg-opacity-60 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-yellow-800 text-center hover:border-yellow-600 transition duration-300 transform hover:scale-105">
                   <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-3 sm:mb-4">2. Pilih Panduan</h3>
                   <p className="text-gray-300 text-sm sm:text-base">Klik nama game dan pilih panduan yang mau dilihat</p>
                 </div>
-                
+
                 <div className="font-caveat bg-black bg-opacity-60 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-yellow-800 text-center hover:border-yellow-600 transition duration-300 transform hover:scale-105">
                   <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-3 sm:mb-4">3. Nikmati</h3>
                   <p className="text-gray-300 text-sm sm:text-base">Baca panduan dan tingkatkan skill dalam game</p>
@@ -301,7 +301,7 @@ function App() {
             </div>
           </div>
         </section>
-        
+
         {/* Footer */}
         <footer className="py-10">
           <div className="container mx-auto px-4">
@@ -311,7 +311,7 @@ function App() {
                   <h3 className="text-lg font-bold text-yellow-500 mb-3 sm:mb-4">About</h3>
                   <p className="text-gray-400 text-sm sm:text-base">Guide Cleone.ID adalah platform untuk mengumpulkan panduan game terbaik dalam satu tempat.</p>
                 </div>
-                
+
                 <div className="text-center sm:text-left">
                   <h3 className="text-lg font-bold text-yellow-500 mb-3 sm:mb-4">Quick Links</h3>
                   <ul className="space-y-2">
@@ -320,7 +320,7 @@ function App() {
                     <li><button onClick={() => scrollToSection(gameListRef)} className="text-gray-400 hover:text-yellow-400 transition text-sm sm:text-base">Games</button></li>
                   </ul>
                 </div>
-                
+
                 <div className="text-center sm:text-left">
                   <h3 className="text-lg font-bold text-yellow-500 mb-3 sm:mb-4">Connect</h3>
                   <ul className="space-y-2">
@@ -328,7 +328,7 @@ function App() {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="border-t border-yellow-900 mt-8 pt-8 text-center">
                 <p className="text-sm text-yellow-700">© 2025 Guide Cleone.ID. All rights reserved.</p>
               </div>

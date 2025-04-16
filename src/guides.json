@@ -1,41 +1,160 @@
 [
   {
     "game": "Girl's Frontline 2: EXILIUM",
+    "keywords": "gfl2 exilium girl frontline gfl Girl's Frontline 2: EXILIUM",
     "links": [
-      { "name": "GFL2 Official Release Info Compilation by Various", "url": "https://docs.google.com/spreadsheets/d/1DogyU3K7ZXw2qbhP1EhRXIAw5nCyIV5G5e-QWviBZME/" },
-      { "name": "GFL2 Character Outfits by Protoxication", "url": "https://docs.google.com/spreadsheets/d/1vLCUFoY0NUjnj_azKaiPgFcwVkXAAInlmIWf989mKzY/" },
-      { "name": "Girls' Frontline 2: Exilium | Starter Pack by Various", "url": "https://docs.google.com/document/d/1Lw45-3H96lrYUAigMgP5LNRndbB6v9aMMFSvW4klP_I/" }
+      {
+        "name": "GFL2 Official Release Info Compilation by Various",
+        "url": "https://docs.google.com/spreadsheets/d/1DogyU3K7ZXw2qbhP1EhRXIAw5nCyIV5G5e-QWviBZME/"
+      },
+      {
+        "name": "GFL2 Character Outfits by Protoxication",
+        "url": "https://docs.google.com/spreadsheets/d/1vLCUFoY0NUjnj_azKaiPgFcwVkXAAInlmIWf989mKzY/"
+      },
+      {
+        "name": "Girls' Frontline 2: Exilium | Starter Pack by Various",
+        "url": "https://docs.google.com/document/d/1Lw45-3H96lrYUAigMgP5LNRndbB6v9aMMFSvW4klP_I/"
+      },
+      {
+        "name": "GFL2 DORK TIPS by dillionmcrich (dillionmcrich#1997)",
+        "url": "https://docs.google.com/document/d/134CEb77HGtEsa81UQWK9wyTm4KwoKFZxs7-cdM0bTO0/"
+      },
+      {
+        "name": "GFL2 'Quick' Progression Notes by Snows🌌❄ (Snows🌌❄#8077)",
+        "url": "https://docs.google.com/presentation/d/1vzm9GoT34A6VPFA-6dIaB4G7YYu36jhL5glpxZ9rNug/"
+      },
+      {
+        "name": "GFL2 - Platoon Leaders Handbook by Snows🌌❄ (Snows🌌❄#8077)",
+        "url": "https://docs.google.com/document/d/1JVkcqWUFeyf-ralVKTD742K4WmKNleUJf7IYuDxQnJ4/"
+      },
+      {
+        "name": "Girls' Frontline 2: Exilium Premium Shop Analysis by jetrico (dragonjet#0001)",
+        "url": "https://docs.google.com/spreadsheets/d/1wV9u_dks-_FVocz5du7FSQE6p5pV29bZkBcMRQmSOh0/"
+      },
+      {
+        "name": "Editable GFL2 Income by Insaiyan7 (Insaiyan7#6364)",
+        "url": "https://docs.google.com/spreadsheets/d/1t7APwIkDbPZtwEMDbH1Ah3G94bHM6MKPuS1adcK3Tuc/"
+      },
+      {
+        "name": "IOP Wiki",
+        "url": "https://iopwiki.com/"
+      },
+      {
+        "name": "Prydwen",
+        "url": "https://www.prydwen.gg/gfl-exilium/"
+      },
+      {
+        "name": "Loot & Waifus",
+        "url": "https://lootandwaifus.com/girls-frontline-2/"
+      },
+      {
+        "name": "GameTora",
+        "url": "https://gametora.com/gfl2"
+      }
     ]
   },
   {
     "game": "Honkai: Star Rail",
+    "keywords": "hsr star rail honkai star rail Honkai: Star Rail",
     "links": [
-      { "name": "Star Rail Station", "url": "https://starrailstation.com/" },
-      { "name": "Hakushin", "url": "https://hsr.hakush.in/" },
-      { "name": "Prydwen.gg", "url": "https://www.prydwen.gg/star-rail/" },
-      { "name": "HoYoLAB", "url": "https://www.hoyolab.com/" },
-      { "name": "DotGG", "url": "https://dotgg.gg/honkai-star-rail/" },
-      { "name": "Fribbels Optimizer", "url": "https://fribbels.github.io/hsr-optimizer/" }
+      {
+        "name": "Star Rail Station",
+        "url": "https://starrailstation.com/"
+      },
+      {
+        "name": "Hakushin",
+        "url": "https://hsr.hakush.in/"
+      },
+      {
+        "name": "Prydwen.gg",
+        "url": "https://www.prydwen.gg/star-rail/"
+      },
+      {
+        "name": "HoYoLAB",
+        "url": "https://www.hoyolab.com/"
+      },
+      {
+        "name": "DotGG",
+        "url": "https://dotgg.gg/honkai-star-rail/"
+      },
+      {
+        "name": "Fribbels Optimizer",
+        "url": "https://fribbels.github.io/hsr-optimizer/"
+      }
     ]
   },
   {
-    "game": "Zenless Zone Zero",
+    "game": "Grand Chase Dimensional Chasers",
+    "keywords": "gc gcdc grand chase Grand Chase Dimensional Chasers",
     "links": [
-      { "name": "ZZZ Wiki", "url": "https://zzz.gg/" },
-      { "name": "ZZZ Honey", "url": "https://zenless.honeyhunterworld.com/" }
+      {
+        "name": "GCDC Meta Spreadsheet",
+        "url": "https://docs.google.com/spreadsheets/d/1FU4RI2MMvSQkO0k4c4IxgwY-hx2YFKNBIfhsXT4uC-I/edit?gid=334452434#gid=334452434"
+      },
+      {
+        "name": "GCDC General Guide Sheet",
+        "url": "https://docs.google.com/spreadsheets/d/1f9t8eBMijhjteSy5JtYjALj85muakOEar75SJnhhs8I/edit?gid=569143834#gid=569143834"
+      }
+    ]
+  },
+  {
+    "game": "Punishing: Gray Raven",
+    "keywords": "pgr gray raven pusing Punishing: Gray Raven",
+    "links": [
+      {
+        "name": "Official",
+        "url": "https://pgr.kurogame.net/"
+      },
+      {
+        "name": "Grayravens",
+        "url": "https://grayravens.com/"
+      },
+      {
+        "name": "Story Mission Achievements by fabiojo40",
+        "url": "https://docs.google.com/spreadsheets/u/0/d/1Lw0sWZVfXFh-YZ9O2qxZCpU6UW7dpCS34i773bzAkcs/htmlview?pli=1"
+      }
+    ]
+  },
+  {
+    "game": "Elsword",
+    "keywords": "elsword eltod rift",
+    "links": [
+      {
+        "name": "Cobodex",
+        "url": "https://cobodex.eu/"
+      }
     ]
   },
   {
     "game": "Wuthering Waves",
+    "keywords": "wuwa ww wuthering waves",
     "links": [
-      { "name": "WW Wiki", "url": "https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki" },
-      { "name": "WW Honey", "url": "https://wuthering.honeyhunterworld.com/" }
+      {
+        "name": "Prydwen",
+        "url": "https://www.prydwen.gg/wuthering-waves/"
+      },
+      {
+        "name": "Wuthering Waves Interactive Map",
+        "url": "https://wuthering-waves-map.appsample.com/"
+      },
+      {
+        "name": "WuWa Tracker",
+        "url": "https://wuwatracker.com/"
+      }
     ]
   },
   {
-    "game": "Blue Protocol",
+    "game": "Blue Archive",
+    "keywords": "ba pedo blu arkep blue archive",
     "links": [
-      { "name": "BP Wiki", "url": "https://blue-protocol.fandom.com/wiki/BLUE_PROTOCOL_Wiki" }
+      {
+        "name": "Hina Loves Midokuni",
+        "url": "https://hina.loves.midokuni.com/"
+      },
+      {
+        "name": "Schale DB",
+        "url": "https://schaledb.com/home"
+      }
     ]
   }
 ]
