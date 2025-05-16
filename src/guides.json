@@ -156,5 +156,19 @@
         "url": "https://schaledb.com/home"
       }
     ]
+  },
+  {
+    "game": "Snowbreak: Containment Zone",
+    "keywords": "snowbreak snowbreak cz snowbreak: containment zone snowbrik snobrik",
+    "links": [
+      {
+        "name": "Snowbreak.GG",
+        "url": "https://snowbreak.gg/"
+      },
+      {
+        "name": "Snowbreak Containment Zone Beginners Guide by Flux Kairos",
+        "url": "https://coda.io/@flux-kairos/snowbreak-containment-zone-beginners-guide"
+      }
+    ]
   }
 ]
